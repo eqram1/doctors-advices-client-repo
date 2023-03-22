@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Login = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm()
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { signIn } = useContext(AuthContext);
+    const [logInError, setLogInError] = useState('');
     const handleLogin = data => {
         console.log(data);
+        setLogInError('');
+        signIn(data.email, data.password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => {
+                console.log(error.message);
+                setLogInError(error.message);
+            });
     }
     return (
         <div className='h-[800px] flex justify-center items-center'>
@@ -33,6 +47,9 @@ const Login = () => {
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                     </div>
                     <input className='btn btn-primary w-full' value="Login" type="submit" />
+                    <div>
+                        {logInError && <p className='text-red-500'>{logInError}</p>}
+                    </div>
                 </form>
                 <p>New to Dovtor's Advices <Link className='text-secondary' to="/signup">Create New Account</Link> </p>
                 <div className="divider">OR</div>
