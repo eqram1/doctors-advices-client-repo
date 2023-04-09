@@ -1,0 +1,162 @@
+<!-- -------
+/*****
+ * index.js.......
+const express = require('express');
+const cors = require('cors');
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+require('dotenv').config();
+
+const port = process.env.PORT || 5000;
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+const uri=`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster`
+
+app.get('/', async (req, res) => {
+    res.send('doctors portal server is running');
+})
+app.listen(port, () => console.log(`Doctors portal server is running on ${port}`))
+ */
+
+
+/**.................... */
+/**
+ src>folder 2nd>Pages
+ Pages>folder 2nd>Home
+ Home>folder 2nd>Home
+ 2nd Home underline>file 1st>Home.js>rsc>h2>this is home
+ */
+/**
+ Pages underline>folder 2nd>Shared
+ Shared>folder 2nd>Navbar
+ Navbar>file 1st>Navbar.js>rsc>h2>this is navbar
+ Shared>folder 2nd>Footer
+ Footer>file 1st>Footer.js>rsc>h2>this is footer
+ /**
+  src select>folder 2nd>Layout
+  Layout>file 1st>Main.js>rsc>navbar,outlet,footer
+  */
+/**
+ src select>folder 2nd>Routes
+ Routes>folder 2nd>Routes
+ 2ns Routes underline select>1st file>Routes.js
+ */
+//google > reactRouterDomV6 > tutorial > ExampleSeen > Routes.js
+/**
+ import {createBrowserRouter} from "react-router-dom";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    children:[
+      {
+    path: "/",
+    element: <Home></Home>,
+    }
+  ]
+  }
+]);
+export default router;
+ */
+//google > reactRouterDomV6 > tutorial > ExampleSeen > App.js > inDiv > routerAutoimport
+/**
+ <RouterProvider router={router}></RouterProvider>
+ */
+/**
+ Pages>2nd folder>Login
+ Login>1st file>Login.js>rsc>h2>this is login
+ Routes.js>element set><Login></Login>
+ live check>terminal>npm start>local host>localhost/Login
+ */
+//NavBarSetUp
+//google > daisyuiCom > NavbarChoice > copy
+/**
+ Navbar.js>div select>ctrl+v>alt+shift+f
+ background>darkmode>
+ */
+//google > daisyuiCom > themes > copy
+/**
+ public>index.html>top>middle of html
+ */
+//App.js
+/**
+ Navbar er max width set up>App.js>div classname='max-w[1440px]'
+ centre allign>mx-auto i.e,Horizontally auto
+ */
+//Navbar.js
+/**
+ daisy uiname change>unwanted li remove>add as per choice>unwanted li remove from below 2nd>
+ variable declare in above return>
+ const menuItems=<ReactFragments>ctrl+v li as per choicealt+shift+f>
+ </ReactFractments>
+ {menuItems} add>remove unwanted div get started>
+ <a>tag remove by using Link by import>
+ ctrl+alt+down arrow>shift+right arrow>backspace>Link react-router-dom auto import to="/"> end button press>left arrow press in a>shift right arrow for a full select>Link write>esc press for normal
+ *without home all are written by small lettersin "/"
+ below <a>tag remove by using Link by import>Link to="/"
+ */
+//Home.js
+/**
+ * div className='mx-5'
+ * 1st Home/Home select>folder 2nd>Banner>file 1st >Banner.js
+ * Doctors portal resources>assets folder copy>src>ctrl+v
+ */
+
+/****........................... */
+//Banner.js
+//google>DaisuUi>Hero>choice>div>paste >alt+shift+f
+/**
+ *  img warning remove>add alt=""
+ * connect>Home.js><Banner import in h2 tag
+ */
+/**
+ * banner.js>remove min-h-screen in 1st div >
+ */
+//google > daisiUi > themeGenerator > taiwindConfig.js > copy
+/*
+*paste in below of contents in tailwindconfig.js
+*background color remove>bg-base-200 delete from banner.js files ist div
+*max-w-sm delete from image line in banner.js
+*chair image recvd>import chair from '..'>img src={chair}>w-1/2
+*button gradient color>*
+*/
+//google > tailwindcss > linearGradient
+/**
+ * lineargradient copy & paste in last of btn-primary>from-primary to-secondary
+ */
+//Navbar.js
+/**
+ * in  navbar.js>1st div>flex justify-between
+ */
+/******............................ */
+/*github.....doctors portal resources
+cd \projects
+git clone cirl+v
+npx create-react-app doctors-portal-client
+cd doctors-portal-client*/
+//google > tailwindcss.com > getStarted > frameworkguide > createReactAppClick
+/**
+ npm install -D tailwindcss postcss autoprefixer
+ npx tailwindcss init-p
+ code .
+ tailwindconfig.js file>cotent copy>ctrl+v
+ src>index.css file>on top>3 copy & ctrl+v
+ */
+//google > daisyui.com > install
+/*
+ npm i daisyui
+ tailwindconfig.js file>plugin copy>ctrl+v
+ ctrl+j>npm srart>found chakti>header to header delete from App.js files
+ button choice from daisuui
+ */
+//google > react - router - domv6 > tutorial
+/*
+npm install react-router-dom
+App.js>button delete>1 no line logo delete>div classname=app delete
+*/
+
+-->
